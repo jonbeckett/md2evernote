@@ -2,7 +2,7 @@
 #                  Recursively reads a directory containing markdown files, and uploads them to Evernote
 #                  Designed to work with the output of wp2md (see https://github.com/jonbeckett/wp2md)
 #                  Also requires the Windows Evernote client installed
-# Author         : Jonathan Beckett (jonbeckett@outlook.com)
+# Author         : Jonathan Beckett (jonathan.beckett@gmail.com)
 # Compatibility  : Python 3.x
 # Pre-Requisites : Windows Evernote Client
 
@@ -74,8 +74,6 @@ for subdir, dirs, files in os.walk(root_path):
 			os.chdir("C:\\Program Files (x86)\\Evernote\\Evernote\\")
 			
 			cmd = "enscript.exe createNote /s \"post.txt\" /n \"Blog\" /i \"" + post_title.replace("\"","") + "\" /c \"" + post_date + "\" /t \"Blog\" /t \"" + year + "-" + month + "\""
-			
-			
 			
 			os.system(cmd)
 			
